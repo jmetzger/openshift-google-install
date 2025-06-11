@@ -1,0 +1,24 @@
+# MCP configuration
+.mcp.json
+
+# Sensitive files
+pull-secret.txt
+
+# OpenShift installation directories and files
+.openshift*
+openshift*/
+openshift-install.log
+
+# Terraform configuration files with sensitive data
+*.tfvars.json
+terraform.platform.auto.tfvars.json
+
+# Authentication and TLS files
+auth/
+tls/
+
+# Archives
+*.tar.gz
+
+# Temporary files
+transcript.txt
