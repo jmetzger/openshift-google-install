@@ -144,6 +144,16 @@ Bei Problemen prüfen Sie:
 2. Das Video-Transkript in `transcript.txt`
 3. Die offizielle OpenShift-Dokumentation
 
+## Deinstallation 
+
+```
+Ins Installationsverzeichnis wechsel 
+-> dann
+
+openshift_install destroy cluster 
+```
+
+
 ---
 
 **Hinweis**: Dieses Script basiert auf OpenShift 4.2 (Tech Preview). Für Produktionsumgebungen verwenden Sie die aktuelle GA-Version.
