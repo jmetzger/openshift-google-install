@@ -959,16 +959,18 @@ else
     print_step "Verwende gespeicherte Billing Account ID: $BILLING_ACCOUNT_ID"
 fi
 
-print_step "Verknüpfe Billing Account mit Projekt..."
-if retry_with_backoff gcloud alpha billing projects link "$GCP_PROJECT" --billing-account="$BILLING_ACCOUNT_ID"; then
-    print_step "Billing Account erfolgreich verknüpft ✓"
+print_step "Verknüpfe Billing Account mit Projekt...(deaktiviert)"
+# ohne alpha alt: gcloud alpha billing projects link
+# neu: gcloud billing projects link 
+#if retry_with_backoff gcloud billing projects link "$GCP_PROJECT" --billing-account="$BILLING_ACCOUNT_ID"; then
+#    print_step "Billing Account erfolgreich verknüpft ✓"
     
     # Aktualisiere Konfigurationsdatei
-    save_config_file
-else
-    print_error "Billing Account Verknüpfung fehlgeschlagen"
-    exit 1
-fi
+ #   save_config_file
+#else
+#    print_error "Billing Account Verknüpfung fehlgeschlagen"
+#    exit 1
+#fi
 
 # Step 8: Create Service Account
 print_header "Schritt 8: Service Account erstellen"
