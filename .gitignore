@@ -7,7 +7,7 @@ pull-secret.txt
 # OpenShift installation directories and files
 .openshift*
 openshift*/
-openshift-install.log
+openshift-install*.log
 
 # Terraform configuration files with sensitive data
 *.tfvars.json
@@ -22,3 +22,6 @@ tls/
 
 # Temporary files
 transcript.txt
+
+# Environment variables (encrypted version .env.enc is committed)
+.env
